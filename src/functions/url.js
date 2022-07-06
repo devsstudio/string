@@ -53,8 +53,8 @@ const _generateQueryStringRecursive = (params, skipobjects, prefix) => {
 const _generateQueryString = (params, skipobjects, prefix) => {
   var querystring = _generateQueryStringRecursive(params, skipobjects, prefix);
 
-  if (querystring.endsWith("&=")) {
-    return querystring.substring(0, querystring.length - 2);
+  if (querystring.endsWith("&")) {
+    return querystring.substring(0, querystring.length - 1);
   } else {
     return querystring;
   }
