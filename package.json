@@ -1,7 +1,7 @@
 {
   "name": "@devs-studio/string",
-  "version": "1.0.8",
-  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "version": "1.0.9",
+  "description": "Manipulación de cadenas y utilidades. Soporta typescript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
