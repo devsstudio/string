@@ -2,8 +2,8 @@ exports.generateAlias = (text) => {
   text = this.normalizeChars(text);
 
   // remove any '-' from the string they will be used as concatonater
-  text = text.replaceAll("-", " ");
-  text = text.replaceAll("_", " ");
+  text = text.replace(/-/g, " ");
+  text = text.replace(/_/g, " ");
 
   // $lang =& JFactory::getLanguage();
   // $str = $lang->transliterate($str);

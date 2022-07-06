@@ -20,7 +20,7 @@ const _st = (z, g) => {
   return "" + (g != "" ? "[" : "") + z + (g != "" ? "]" : "");
 };
 
-exports.fromObject = (params, skipobjects, prefix) => {
+exports.generateQueryString = (params, skipobjects, prefix) => {
   if (skipobjects === void 0) {
     skipobjects = false;
   }
@@ -34,10 +34,10 @@ exports.fromObject = (params, skipobjects, prefix) => {
   for (var param in params) {
     var c = "" + prefix + _st(param, prefix);
     if (isObj(params[param]) && !skipobjects) {
-      result += this.fromObject(params[param], false, "" + c);
+      result += this.generateQueryString(params[param], false, "" + c);
     } else if (Array.isArray(params[param]) && !skipobjects) {
       params[param].forEach(function (item, ind) {
-        result += this.fromObject(item, false, c + "[" + ind + "]");
+        result += this.generateQueryString(item, false, c + "[" + ind + "]");
       });
     } else {
       result += c + "=" + encodeURIComponent(params[param]) + "&";
