@@ -1,6 +1,6 @@
 {
   "name": "@devs-studio/string",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Manipulación de cadenas y utilidades. Soporta typescript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,5 +26,8 @@
   "homepage": "https://bitbucket.org/JeanPaper/devsstudio-string#readme",
   "devDependencies": {
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "querystring": "^0.2.1"
   }
 }
