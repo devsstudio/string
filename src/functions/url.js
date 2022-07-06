@@ -20,7 +20,7 @@ const _st = (z, g) => {
   return "" + (g != "" ? "[" : "") + z + (g != "" ? "]" : "");
 };
 
-exports.generateQueryString = (params, skipobjects, prefix) => {
+const _generateQueryStringRecursive = (params, skipobjects, prefix) => {
   if (skipobjects === void 0) {
     skipobjects = false;
   }
@@ -34,10 +34,14 @@ exports.generateQueryString = (params, skipobjects, prefix) => {
   for (var param in params) {
     var c = "" + prefix + _st(param, prefix);
     if (isObj(params[param]) && !skipobjects) {
-      result += this.generateQueryString(params[param], false, "" + c);
+      result += _generateQueryStringRecursive(params[param], false, "" + c);
     } else if (Array.isArray(params[param]) && !skipobjects) {
       params[param].forEach(function (item, ind) {
-        result += this.generateQueryString(item, false, c + "[" + ind + "]");
+        result += _generateQueryStringRecursive(
+          item,
+          false,
+          c + "[" + ind + "]"
+        );
       });
     } else {
       result += c + "=" + encodeURIComponent(params[param]) + "&";
@@ -45,3 +49,14 @@ exports.generateQueryString = (params, skipobjects, prefix) => {
   }
   return result;
 };
+
+const _generateQueryString = (params, skipobjects, prefix) => {
+  var querystring = _generateQueryStringRecursive(params, skipobjects, prefix);
+
+  if (querystring.endsWith("&=")) {
+    return querystring.substring(0, querystring.length - 2);
+  } else {
+    return querystring;
+  }
+};
+exports.generateQueryString = _generateQueryString;
