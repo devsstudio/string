@@ -23,6 +23,8 @@ exports.en = {
     alert: "Alert",
     no_data: "No data available",
     my_account: "My account",
+    success: "Success",
+    successful_operation: "Successful operation",
     an_error_has_occurred: "An error has occurred",
   },
   forms: {

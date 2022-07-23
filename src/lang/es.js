@@ -23,6 +23,8 @@ exports.es = {
     alert: "Alerta",
     my_account: "Mi cuenta",
     no_data: "No hay datos disponibles",
+    success: "Éxito",
+    successful_operation: "Operación completada correctamente",
     an_error_has_occurred: "Ha ocurrido un error",
   },
   forms: {
