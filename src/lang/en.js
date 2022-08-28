@@ -1,11 +1,13 @@
 exports.en = {
   verbs: {
     accept: "Accept",
+    add: "Add",
     back: "Back",
     cancel: "Cancel",
     change_color: "Change color",
     change_password: "Change password",
     clear: "Clear",
+    create: "Create",
     delete: "Delete",
     login: "Login",
     logout: "Logout",

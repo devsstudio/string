@@ -1,11 +1,13 @@
 exports.es = {
   verbs: {
     accept: "Aceptar",
+    add: "Agregar",
     back: "Regresar",
     cancel: "Cancelar",
     change_color: "Cambiar color",
     change_password: "Cambiar contraseña",
     clear: "Limpiar",
+    create: "Crear",
     delete: "Eliminar",
     login: "Iniciar sesión",
     logout: "Cerrar sesión",
