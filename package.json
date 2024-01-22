@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devsstudio/string.git"
+    "url": "https://github.com/devsstudio/sunat.git"
   },
   "keywords": [
     "string",
@@ -22,9 +22,9 @@
   "author": "Devs Studio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devsstudio/string/issues"
+    "url": "https://github.com/devsstudio/sunat/issues"
   },
-  "homepage": "https://github.com/devsstudio/string",
+  "homepage": "https://github.com/devsstudio/sunat",
   "devDependencies": {
     "typescript": "^4.9.4"
   },
