@@ -1,6 +1,6 @@
 export class AmountToLettersHelper {
 
-  public static convert(amount: string, unit: string = ''): string {
+  public static convert(amount: string, force_decimals: boolean = false, unit: string = ''): string {
 
     const xarray: { [key: number]: string } = {
       0: "CERO",
@@ -132,14 +132,16 @@ export class AmountToLettersHelper {
             }
             break;
           case 2:
-            if (parseFloat(amount) < 1) {
-              xcadena = "CERO CON " + xdecimales + "/100 " + unit;
-            }
-            if (parseFloat(amount) >= 1 && parseFloat(amount) < 2) {
-              xcadena = "UNO CON " + xdecimales + "/100 " + unit;
-            }
-            if (parseFloat(amount) >= 2) {
-              xcadena += " CON " + xdecimales + "/100 " + unit;
+            if (xdecimales !== "00" || force_decimals) {
+              if (parseFloat(amount) < 1) {
+                xcadena = "CERO CON " + xdecimales + "/100 " + unit;
+              }
+              if (parseFloat(amount) >= 1 && parseFloat(amount) < 2) {
+                xcadena = "UNO CON " + xdecimales + "/100 " + unit;
+              }
+              if (parseFloat(amount) >= 2) {
+                xcadena += " CON " + xdecimales + "/100 " + unit;
+              }
             }
             break;
         }
