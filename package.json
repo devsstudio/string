@@ -1,6 +1,6 @@
 {
   "name": "@devs-studio/string",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Manipulación de cadenas y utilidades. Soporta typescript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devsstudio/sunat.git"
+    "url": "https://github.com/devsstudio/string.git"
   },
   "keywords": [
     "string",
@@ -22,9 +22,9 @@
   "author": "Devs Studio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/devsstudio/sunat/issues"
+    "url": "https://github.com/devsstudio/string/issues"
   },
-  "homepage": "https://github.com/devsstudio/sunat",
+  "homepage": "https://github.com/devsstudio/string",
   "devDependencies": {
     "typescript": "^4.9.4"
   },
