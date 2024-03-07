@@ -107,25 +107,27 @@ export class AmountToLettersHelper {
         xi += 3;
       }
 
-      if (xcadena.trim().endsWith("ILLON")) {
+      if (xcadena.trim().endsWith("ILLON") && unit) {
         xcadena += " DE";
       }
 
-      if (xcadena.trim().endsWith("ILLONES")) {
+      if (xcadena.trim().endsWith("ILLONES") && unit) {
         xcadena += " DE";
       }
 
       if (xaux.trim() !== "") {
         switch (xz) {
           case 0:
-            if (xaux.substring(xz * 6, xz * 6 + 6).trim() === "1") {
+            if (xaux.trim() === "1") {
+              //if (xaux.substring(xz * 6, xz * 6 + 6).trim() === "1") {
               xcadena += " UN BILLON ";
             } else {
               xcadena += " BILLONES ";
             }
             break;
           case 1:
-            if (xaux.substring(xz * 6, xz * 6 + 6).trim() === "1") {
+            //if (xaux.substring(xz * 6, xz * 6 + 6).trim() === "1") {
+            if (xaux.trim() === "1") {
               xcadena += " UN MILLON ";
             } else {
               xcadena += " MILLONES ";
@@ -149,12 +151,14 @@ export class AmountToLettersHelper {
 
       xcadena = xcadena.replace("VEINTI ", "VEINTI");
       xcadena = xcadena.replace(/ +(?= )/g, ''); // Eliminar espacios duplicados
-      xcadena = xcadena.replace("UN MIL ", "MIL ");
       xcadena = xcadena.replace("UN UN", "UN");
       xcadena = xcadena.replace(/ +(?= )/g, ''); // Eliminar espacios duplicados
       xcadena = xcadena.replace("BILLON DE MILLONES", "BILLON DE");
       xcadena = xcadena.replace("BILLONES DE MILLONES", "BILLONES DE");
       xcadena = xcadena.replace("DE UN", "UN");
+      if (xcadena.trim().startsWith("UN MIL")) {
+        xcadena = xcadena.replace("UN MIL", "MIL");
+      }
     }
 
     return xcadena.trim();
