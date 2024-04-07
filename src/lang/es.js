@@ -34,6 +34,7 @@ exports.es = {
       labels: {
         email_address: "Correo",
         username: "Nombre de usuario",
+        name: "Nombre completo",
         password: "Contraseña",
         newPassword: "Nueva contraseña",
         confirmPassword: "Confirmar contraseña",
@@ -49,8 +50,31 @@ exports.es = {
         on401: "Por favor revise sus credenciales y vuelva a intentarlo",
         forgot_password: "¿Olvidó su contraseña?",
         recover_password: "Recuperar contraseña",
+        change_password: "Inicio correcto, pero debe cambiar su contraseña",
         has_no_account: "¿No tiene una cuenta aún?",
         changed: "La contraseña se cambió correctamente",
+      },
+    },
+    confirmLogin: {
+      labels: {
+        username: "Nombre de usuario",
+        email_address: "Correo de usuario",
+        newPassword: "Nueva contraseña",
+        confirmPassword: "Confirmar contraseña",
+        code: "Código de confirmación",
+        resend_code: "Reenviar código de confirmación",
+      },
+      placeholders: {
+        code: "Ingrese su código de confirmación",
+        newPassword: "Ingrese su nueva contraseña",
+        confirmPassword: "Confirmar su nueva contraseña",
+      },
+      messages: {
+        resend_code: "Código enviado correctamente",
+        confirmed: "Usuario confirmado",
+        on400: "Hay errores de validación",
+        passwordNotMatch: "Las contraseñas no coinciden",
+        passwordMatch: "La contraseña no puede ser igual que la anterior",
       },
     },
     signUp: {
@@ -75,6 +99,7 @@ exports.es = {
       messages: {
         has_account: "¿Ya tiene una cuenta?",
         on400: "Hay errores de validación",
+        passwordNotMatch: "Las contraseñas no coinciden",
       },
     },
     confirmSignUp: {
@@ -109,6 +134,8 @@ exports.es = {
       messages: {
         changed: "La contraseña se cambió correctamente",
         on400: "Hay errores de validación",
+        passwordNotMatch: "Las contraseñas no coinciden",
+        passwordMatch: "La contraseña no puede ser igual que la anterior",
       },
     },
     forgotPassword: {

@@ -34,6 +34,7 @@ exports.en = {
       labels: {
         email_address: "Email",
         username: "Username",
+        name: "Name",
         password: "Password",
         newPassword: "New password",
         confirmPassword: "Confirm new password",
@@ -49,8 +50,31 @@ exports.en = {
         on401: "Please, check your credentials and try again.",
         forgot_password: "Forgot your password?",
         recover_password: "Recover password",
+        change_password: "Login successfully, but you must change your password",
         has_no_account: "Don't have an account yet?",
         changed: "Password changed successfully",
+      },
+    },
+    confirmSignIn: {
+      labels: {
+        email_address: "User email",
+        username: "Username",
+        code: "Confirm code",
+        resend_code: "Resend confirm code",
+        newPassword: "New password",
+        confirmPassword: "Confirm new password",
+      },
+      placeholders: {
+        code: "Enter your confirm code",
+        newPassword: "New password",
+        confirmPassword: "Confirm new password",
+      },
+      messages: {
+        resend_code: "Code resent successfully",
+        confirmed: "Confirmed user.",
+        on400: "Validation error",
+        newPassword: "Enter new password",
+        confirmPassword: "Confirm new password",
       },
     },
     signUp: {
@@ -74,6 +98,7 @@ exports.en = {
       },
       messages: {
         has_account: "Have an account?",
+        passwordNotMatch: "Passwords must match",
         on400: "Validation error",
       },
     },
@@ -109,6 +134,8 @@ exports.en = {
       messages: {
         changed: "Password changed successfully",
         on400: "Validation error",
+        passwordNotMatch: "Passwords must match",
+        passwordMatch: "Password cannot be the same as the previous one",
       },
     },
     forgotPassword: {
