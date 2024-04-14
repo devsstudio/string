@@ -144,6 +144,13 @@ export class AmountToLettersHelper {
               if (parseFloat(amount) >= 2) {
                 xcadena += " CON " + xdecimales + "/100 " + unit;
               }
+            } else {
+              if (parseFloat(amount) < 1) {
+                xcadena = "CERO";
+              }
+              if (parseFloat(amount) >= 1 && parseFloat(amount) < 2) {
+                xcadena = "UNO";
+              }
             }
             break;
         }
