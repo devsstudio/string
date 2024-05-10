@@ -1,12 +1,32 @@
+import queryString from 'query-string';
+
 export default class UrlHelper {
-  static isObj(a: any) {
+
+  static getJsonQuery(url: string) {
+    const parts = url.split("?");
+    if (parts.length > 1) {
+      const qs = parts[1];
+      return queryString.parse(qs);
+    } if (parts.length === 1) {
+      const qs = parts[0];
+      return queryString.parse(qs);
+    } else {
+      return null;
+    }
+  }
+
+  static stringify(parsed: any) {
+    return queryString.stringify(parsed);
+  }
+
+  private static isObj(a: any) {
     if (!!a && a.constructor === Object) {
       return true;
     }
     return false;
   }
 
-  static _st(z: string, g: string) {
+  private static _st(z: string, g: string) {
     return '' + (g != '' ? '[' : '') + z + (g != '' ? ']' : '');
   }
 
@@ -34,5 +54,15 @@ export default class UrlHelper {
       }
     }
     return result;
+  }
+
+  static generateQueryString = (params: any, skipobjects?: any, prefix?: any) => {
+    var querystring = UrlHelper.fromObject(params, skipobjects, prefix);
+
+    if (querystring.endsWith("&")) {
+      return querystring.substring(0, querystring.length - 1);
+    } else {
+      return querystring;
+    }
   }
 }

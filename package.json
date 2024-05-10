@@ -1,6 +1,6 @@
 {
   "name": "@devs-studio/string",
-  "version": "1.0.32",
+  "version": "1.0.34",
   "description": "Manipulación de cadenas y utilidades. Soporta typescript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,6 +29,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "querystring": "^0.2.1"
+    "query-string": "^9.0.0"
   }
 }
