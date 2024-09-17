@@ -21,3 +21,22 @@ export function generateAlias(text: string) {
 //       strpos(haystack, needle, temp) !== FALSE)
 //   );
 // };
+
+export class StringHelper {
+  public static split(str: string, delimiter: string, limit: number = 0) {
+    if (limit <= 0) {
+      return [str];
+    }
+
+    const parts = str.split(delimiter);
+
+    if (parts.length <= limit) {
+      return parts;
+    }
+
+    const result = parts.slice(0, limit - 1);
+    result.push(parts.slice(limit - 1).join(delimiter));
+
+    return result;
+  }
+}
