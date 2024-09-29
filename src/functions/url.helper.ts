@@ -1,23 +1,4 @@
-import queryString from 'query-string';
-
 export default class UrlHelper {
-
-  static getJsonQuery(url: string) {
-    const parts = url.split("?");
-    if (parts.length > 1) {
-      const qs = parts[1];
-      return queryString.parse(qs);
-    } if (parts.length === 1) {
-      const qs = parts[0];
-      return queryString.parse(qs);
-    } else {
-      return null;
-    }
-  }
-
-  static stringify(parsed: any) {
-    return queryString.stringify(parsed);
-  }
 
   private static isObj(a: any) {
     if (!!a && a.constructor === Object) {
